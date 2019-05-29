@@ -1,0 +1,249 @@
+<form method="POST" name="UserUpdateform" id="UserUpdateform" onsubmit="return false;" enctype="multipart/form-data">	<input type="hidden" id="action" name="action" value="WCP_Trades_Controller::UpdateUserDetails">	
+	<input type="hidden" id="user_id" ref="user_id" name="user_id" value="'.$user_details[0]["trade_id"].'">	
+	<div class="form-group">		
+		<label for="user_name" class="col-form-label">User Name:</label>		
+		<input type="text" class="form-control" id="user_name" name="user_name" value="'.$user_details[0]["display_name"].'" disabled> 	
+	</div>	
+	<div class="form-group">		
+		<label for="crypto_traded" class="col-form-label">Crypto Currency Traded:</label> 		
+		<input type="text" class="form-control" id="crypto_traded" name="crypto_traded" value="'.$user_details[0]["crypto_traded"].'"> 	
+	</div> 	
+	<div class="form-group">		
+		<label for="price" class="col-form-label">Price:</label> 		
+		<input type="number" class="form-control" id="price" name="price" value="'.$user_details[0]["price"].'"> 	
+	</div> 	
+	<div class="form-group">		
+		<label for="no_of_coins" class="col-form-label">No Of Coins:</label> 		
+		<input type="number" class="form-control" id="no_of_coins" name="no_of_coins" value="'.$user_details[0]["no_of_coins"].'"> 	
+	</div>	
+	<div class="form-group">		
+		<label for="is_buy_sell" class="col-form-label">Buy OR Sell:</label> 	
+		<select name="is_buy_sell" class="form-control" id="is_buy_sell">		
+			<option value="buy" '.$buy.'>Buy</option>			
+			<option value="sell" '.$sell.'>Sell</option>		
+		</select>	
+	</div>	
+	<div class="form-group">		
+		<label for="date_time" class="col-form-label">Date / Time:</label> 		
+		<input type="Date" class="form-control" id="date_time" name="date_time" value="'.date('Y/m/d',$user_details[0]["date_time"]).'"> 	
+	</div>
+</form>
+	<div class="task_note_template" style="display:none;">
+<div class="task_note_container" style="padding-bottom:30px;">
+<div style="padding-left:20px; border-left:2px solid #a5ce6e;">
+<div style="float:left">
+<span class="action" style="color: #a5ce6e; font-weight:900;"></span><span style="color: #a3a8b3"> by </span><span style="font-weight:900;" class="username"></span> on <span style="color :#a3a8b3" class="created_date_time"></span>
+<div>
+Status:
+</div>
+</div>
+<div style="float:left; display:none; padding-left:10px;" class="edit_note_wrapper">
+<input type="hidden" class="note_id hidden_input_note_id" name="note_id" value="">
+<button class="btn btn-primary edit_note_btn">Edit Note</button>
+</div>
+<div style="float:left; display:none; padding-left:10px;" class="notify_client_for_this_note_wrapper">
+<button class="btn btn-primary notify_client_for_this_note_btn">Notify Client for this update</button>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div style="padding-top:20px; padding-left:20px;">
+<div style="float:left;">
+<div>
+<span class="description" style="color:#000000;"></span>
+</div>
+<div>
+<span class="worked_for" style="display:none; color:#000000;"></span>
+</div>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="note_files_wrapper" style="padding-top:20px; padding-left:20px;">
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+var data = {};
+$.ajax({
+url:	'/tasks/get_init_page_load_data/',
+type:	'POST',
+dataType: 'json',
+data:	data,
+}).done(function(resp) {
+//console.info('done');
+//console.info(resp);
+console.info('load page');
+console.info(resp);
+if (resp.is_success) {
+var arr_task_priority_data = resp.arr_task_priority_data;
+var arr_task_status_data = resp.arr_task_status_data;
+for(var i=0;i<arr_task_priority_data.length;i++) {
+var temp = $('.task_filter_option_template').find('.task_filter_option_wrapper').clone(true);
+temp.find('.checkbox_input_text').html(arr_task_priority_data[i]['value']);
+temp.find('.checkbox_input').val(arr_task_priority_data[i]['key']);
+$('.side_bar_priority_filter_options').append(temp);
+}
+$('.side_bar_priority_filter_options').find('.checkbox_input').change(function() {
+tasks_data_table.ajax.reload();
+});
+
+for(var i=0;i<arr_task_status_data.length;i++) {
+var temp = $('.task_filter_option_template').find('.task_filter_option_wrapper').clone(true);
+temp.find('.checkbox_input_text').html(arr_task_status_data[i]['value']);
+temp.find('.checkbox_input').val(arr_task_status_data[i]['key']);
+//console.info("task input");
+//console.info(temp.html());
+$('.side_bar_status_filter_options').append(temp);
+}
+$('.side_bar_status_filter_options').find(".checkbox_input[value='1']").prop('checked',true);
+$('.side_bar_status_filter_options').find(".checkbox_input[value='3']").prop('checked',true);
+$('.side_bar_status_filter_options').find(".checkbox_input[value='5']").prop('checked',true);
+$('.side_bar_status_filter_options').find(".checkbox_input[value='4']").prop('checked',true);
+$('.side_bar_status_filter_options').find(".checkbox_input[value='8']").prop('checked',true);
+$('.side_bar_status_filter_options').find(".checkbox_input[value='40']").prop('checked',true);
+
+$('.side_bar_status_filter_options').find('.checkbox_input').change(function() {
+tasks_data_table.ajax.reload();
+});
+tasks_data_table.ajax.reload();
+role_type_id = resp.role_type_id;
+if (resp.role_type_id != 10) {
+$('.create_new_project_btn').css('display','none');
+}
+
+if (resp.role_type_id == Common_Users_Model.CLIENT_ROLE_TYPE_ID) {
+$('#task_modal').find('.is_show_only_to_owner_wrapper').css('display','none');
+$('#task_modal').find('.is_show_only_dev_wrapper').css('display','none');
+}
+
+
+if (resp.role_type_id == Common_Users_Model.ADMIN_ROLE_TYPE_ID) {
+$('.user_hours_drop_down_wrapper').css('display','');
+$('.generate_invoice_drop_down_wrapper').css('display','');
+$('.add_user_btn_wrapper').css('display','block');
+} else {
+$('.add_user_btn_wrapper').css('display','none');
+}
+
+if (resp.is_temp_session) {
+console.info('setting project id to ' + resp.temp_project_id);
+$('.projects_drop_down').append(new Option(resp.temp_project_id, resp.temp_project_id));
+$(".projects_drop_down").val(resp.temp_project_id);
+BackEnd_TempSessions_Controller.is_temp_session = true; 
+BackEnd_TempSessions_Controller.temp_session_id = resp.temp_session_id;
+BackEnd_TempSessions_Controller.task_id = resp.temp_task_id;
+BackEnd_TempSessions_Controller.project_id = resp.temp_project_id;
+var param_task_id = 0;
+if (resp.temp_task_id == 0) {
+var url_string = window.location.href
+var url = new URL(url_string);
+param_task_id = url.searchParams.get("task_id");
+if (param_task_id > 0) {
+resp.temp_task_id = param_task_id;
+BackEnd_TempSessions_Controller.task_id = resp.temp_task_id;
+}
+}
+
+if (resp.temp_task_id > 0) {
+$('.create_new_project_btn').css('display','none');
+$('.view_hours_btn').css('display','none');
+$('.view_tasks_btn').css('display','none');
+$('.projects_select_wrapper').css('display','none');
+
+
+$('.cancel_task_btn').css('display','none');
+$('.update_task_notify_client_btn').css('display','none');
+$('.optional_note_template_wrapper').css('display','none');
+$('.go_back_to_task_lists_btn').css('display','none');
+
+edit_task_item(resp.temp_task_id);
+}
+} else {
+$('.task_list_wrapper').css('display','');
+}
+
+}
+
+//estimate = JSON.parse(resp);
+});
+
+var temp = $('.task_note_template').clone(true);
+//console.info(temp.html());
+
+temp.find('.task_note_container').data('note_id', resp.arr_notes_data[i].id);
+temp.find('.hidden_input_note_id').val(resp.arr_notes_data[i].id);
+temp.find('.hidden_input_note_id').addClass('hidden_input_node_id_' + resp.arr_notes_data[i].id);
+console.info('edite note btn');
+if (resp.arr_notes_data[i].is_allow_users_to_edit_their_notes) {
+temp.find('.edit_note_wrapper').css('display','block');
+}
+if (resp.role_type_id != Common_Users_Model.CLIENT_ROLE_TYPE_ID) {
+temp.find('.notify_client_for_this_note_wrapper').css('display','block');
+}
+var description = resp.arr_notes_data[i]['notes'];
+//descripton = description.replace(/(https:\/\/[a-zA-Z0-9\.]+)/, "<a target=\"_blank\" href=\"$1\">$1</a>");
+//descripton = description.replace(/(http:\/\/[a-zA-Z0-9\.]+)/, "<a target=\"_blank\" href=\"$1\">$1</a>");
+
+/*
+description = description.replace(/[<>&\n]/g, function(x) {
+return {
+'<': '&lt;',
+'>': '&gt;',
+'&': '&amp;',
+}[x];
+});
+*/
+
+descripton = description.replace(/(http[s]*\:\/\/[\&\_\=\?\:\/\.\-0-9a-zA-Z]+)/g, "<a target=\"_blank\" href=\"$1\">$1</a>");
+
+console.info('description ' + BackEnd_Themes_Basic1_Tasks_Controller.nl2br(description));
+//description = nl2br(description);
+
+temp.find('.description').html(descripton);
+
+temp.find('.action').html("Stayed Open");
+temp.find('.username').html(resp.arr_notes_data[i]['username']);
+temp.find('.created_date_time').html(resp.arr_notes_data[i]['friendly_created_date_time']);
+if (resp.arr_notes_data[i]['hours_worked'] != "") {
+temp.find('.worked_for').html(resp.arr_notes_data[i]['hours_worked']);
+temp.find('.worked_for').css('display','');
+//console.info('in here hours worked');
+}
+
+// hide button if in temp session. may change this later
+if (BackEnd_TempSessions_Controller.is_temp_session) {
+temp.find('.notify_client_for_this_note_btn').css('display','none');
+}
+
+var arr_files = resp.arr_notes_data[i]['arr_files'];
+console.info('file is ');
+console.info(arr_files);
+for(var n=0; n < arr_files.length;n++) {
+var note_file_html = "";
+note_file_html = note_file_html + "<a class=\"note_file_link\" target=\"blank\" href=\"/files/download/"+arr_files[n]['id'] +"\">" + arr_files[n]['original_filename']+"</a>";
+note_file_html = note_file_html + "<a class=\"note_file_link\" target=\"blank\" href=\"/files/download/"+arr_files[n]['id'] +"?force_download=1\">" + "<img style=\"margin-left:5px;\" height=12 src=\"/application/BackEnd/Themes/Basic1/images/link-16.png\" /></a>";
+note_file_html = note_file_html + "<br>";
+console.info('file wrapper html');
+
+console.info(note_file_html);
+temp.find('.note_files_wrapper').append(note_file_html);
+}
+//temp.find('.edit_note_btn').on('click', edit_note_btn);
+
+$('.task_notes_list').append(temp.html());
+
+Dino, 3:38 PM
+like this code
+
+Dino, 3:38 PM
+var temp = $('.task_note_template').clone(true);
+//console.info(temp.html());
+
+temp.find('.task_note_container').data('note_id', resp.arr_notes_data[i].id);
+temp.find('.hidden_input_note_id').val(resp.arr_notes_data[i].id);
+
+
+Dino, 3:39 PM
+$('.task_notes_list').append(temp.html());
+</script>

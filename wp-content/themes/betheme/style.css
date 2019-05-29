@@ -1,0 +1,1037 @@
+/*
+Theme Name: KIS
+Theme URI: https://#
+Author: Muffin group
+Author URI: https://#
+Description: The biggest WordPress Theme ever
+License: Themeforest Split Licence
+License URI: https://themeforest.net/licenses/standard
+Text Domain: betheme
+Version: 21.0.8
+
+All css files are placed in /css/ folder
+*/
+body
+{
+    height:100vh;
+}
+body:not(.template-slider) #Header {
+    min-height: 0 !important;
+}
+div#Top_bar {
+    border-bottom: 1px solid #f1f1f1;
+}
+#Top_bar #logo
+{
+    height: 70px !important;
+    padding: 0px 0 !important;
+}
+#Top_bar #logo img
+{
+    padding: 0 !important;
+    height: 70px !important;
+    margin: 5px 0 0 0  !important;
+}
+.join_beta_list a
+{
+        padding: 0 !important;
+    background: #436397;
+    border: 1px solid;
+    border-color: #436397;
+    border-radius: 11px;
+    box-shadow: 0 10px 30px rgb(67, 99, 151);
+    float: left;
+    margin: 28px 0px 0 20px;
+    -webkit-transition: 0.2s !important;
+    -moz-transition: 0.2s !important;
+    transition: 0.2s !important;
+    font-family: 'Nunito' !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: capitalize !important;
+    letter-spacing: 0.5px !important;
+    color: #FFF !important;
+    display: inline !important;
+}
+.join_beta_list a span
+{
+        line-height: 35px !important;
+        padding:0 25px !important;
+}
+.home_row
+{
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 150px 0 0px 0;
+}
+.home_row h2
+{
+	font-size: 48px;
+	line-height:55px;
+}
+.home_row img
+{
+	width: 425px;
+	height: 500px;
+	margin: 0 auto;
+}
+.home_row .intro h3{
+	font-size: 22px;
+    font-family: 'Nunito';
+    line-height: 1.6;
+    color: #848484;
+    max-width: 400px;
+    margin-top: 20px;
+}
+.home_row .intro h5
+{
+	font-size: 16px;
+	font-family: 'Nunito';
+    line-height: 1.6;
+    color: #848484;
+    max-width: 400px;
+    margin-top: 35px;
+}
+.home_row .join_beta_list_btn a
+{
+	padding: 0.5rem 1.5rem;
+    background: #436397;
+    border: 1px solid;
+    border-color: #436397;
+    border-radius: .125rem;
+    box-shadow: 0 10px 30px rgb(67, 99, 151);
+    float: left;
+    margin: 10px 12px 0 0;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: #FFF;
+    display: inline;
+}
+.secondRow
+{
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 100px 0 100px 0;
+}
+.secondRow h4
+{
+	font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    color: #848484;
+    text-transform: capitalize;
+    margin-bottom: 20px !important;
+    text-align: center;
+}
+.secondRow h2
+{
+	font-family: 'Roboto';
+    font-size: 36px;
+    font-weight: 300 !important;
+    color: #404040;
+}
+.secondRow .sec_row_para
+{
+	margin: 20px 0;
+}
+.secondRow .sec_row_para p
+{
+	font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    color: #848484;
+    line-height: 1.4;
+    text-align:center;
+    margin: 0;
+}
+.secondRow .second_inner {
+	justify-content: space-between;
+    display: flex;
+     -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+.fadeInDown {
+            -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+         }
+         @-webkit-keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateY(-20px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateY(0);
+            }
+         }
+         
+         @keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               transform: translateY(-20px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+.secondRow .second_inner .fourCols
+{
+	    background: #fff;
+    width: 23%
+}
+.secondRow .second_inner .fourCols .vc_column-inner
+{
+	padding: 30px;
+}
+
+.secondRow .second_inner .fourCols h3
+{
+	font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
+    color: #343434;
+    margin: 0 0 20px 0;
+}
+.secondRow .second_inner .fourCols p
+{
+	font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 1.6;
+    color: #A1A1A1;
+}
+.thirdRow
+{
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 100px 0 70px 0;
+}
+.fourthRow
+{
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 90px 0 50px 0;
+}
+.fourthRow h2
+{
+	font-family: 'Roboto';
+    font-size: 34px;
+    font-weight: 300 !important;
+    line-height: 1.4;
+    color: #252525;
+    margin-bottom: 20px;
+    text-align: center !important;
+}
+.fourthRow h4
+{
+	font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #222222;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.fourCols:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,.15);
+}
+#Footer .footer_copy .one
+{
+	padding-top: 10px !important;
+	margin: 0 !important;
+}
+.footer-copy-center #Footer .footer_copy .copyright
+{
+    font-weight: 600;
+    font-family: 'Nunito';
+}
+.about_section
+{
+    width: 100%;
+    float: left;
+    padding: 100px 0;
+    margin:0;
+}
+.about_section h2
+{
+    font-size: 36px;
+    margin-bottom: 20px !important;
+}
+.about_section p
+{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    color: #848484;
+    line-height: 2;
+    /*text-align: center;*/
+    margin: 20px 0 0 ;
+}
+.pricing_row
+{
+    width: 100%;
+    float: left;
+    padding-bottom: 50px !important;
+    margin:0;
+}
+.pricing_row h2
+{
+    font-size: 36px;
+     margin-bottom: 30px !important;
+    padding-top: 80px;
+}
+.pricing_row .mega-price-table-4 > .pricing-table .plan-price
+{
+    font-weight: 800;
+    font-size: 28px;
+}
+.pricing_row .mega-price-table-4 > .pricing-table .price-content p
+{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0 30px;
+    min-height: 50px;
+}
+.pricing_row .mega-price-table-4 > .pricing-table .featured .plan-select
+{
+    padding: 20px 20px;
+    line-height: 40px;
+}
+.pricing_row .mega-price-table-4 > .pricing-table .featured .plan-select a
+{
+    padding: 0.5rem 1.5rem;
+    background: #436397 !important;
+    border: 1px solid;
+    border-color: #436397;
+    border-radius: .125rem;
+    box-shadow: 0 10px 30px rgb(67, 99, 151);
+    margin: 10px 12px 0 0;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: #FFF;
+    display: inline;
+}
+.pricing_row .mega-price-table-4 > .pricing-table .plan.featured
+{
+    background: #97B8B6 !important;
+}
+.pulseicon
+{
+    display: inline-block;
+	-moz-animation: pulse1 2s infinite linear;
+	-o-animation: pulse1 2s infinite linear;
+	-webkit-animation: pulse1 2s infinite linear;
+	animation: pulse1 2s infinite linear;
+}
+@-webkit-keyframes pulse1 {
+	0% { opacity: 1; }
+	50% { opacity: 0.2; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes pulse1 {
+	0% { opacity: 1; }
+	50% { opacity: 0.2; }
+	100% { opacity: 1; }
+}
+@keyframes pulse1 {
+	0% { opacity: 1; }
+	50% { opacity: 0.2; }
+	100% { opacity: 1; }
+}
+
+@-o-keyframes pulse1 {
+	0% { opacity: 1; }
+	50% { opacity: 0.2; }
+	100% { opacity: 1; }
+}
+
+
+ 
+.fourthRow .es_textbox
+{
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 30px;
+}
+.fourthRow .es_textbox input[type="email"]
+{
+    float: left;
+    width: 70%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.fourthRow .es_textbox input#es_txt_button {
+    background-color: #436397;
+    border-radius: 3px;
+}
+.register_row 
+{
+    width: 100%;
+    float: left;
+    padding: 100px 0;
+    margin:0;
+}
+.register_row h2
+{
+    font-size: 36px;
+    margin-bottom: 50px !important;
+}
+.register_row .regiterFrm .btnSubmit
+{
+    padding: 0.5rem 4rem;
+    background: #436397 !important;
+    border: 1px solid;
+    border-color: #436397;
+    border-radius: .5rem;
+    box-shadow: 0 10px 30px rgb(67, 99, 151);
+    margin: 10px auto;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: #FFF;
+    display: block;
+    height:37px;
+}
+.register_row .regiterFrm .form-control {
+    height: 40px;
+    width: 100%;
+}
+.login_row
+{
+    width: 100%;
+    float: left;
+    padding: 100px 0;
+    margin:0;
+}
+.login_row h2
+{
+    font-size: 36px;
+    margin-bottom: 50px !important;
+}
+.login_row .Login_Frm .btnSubmit
+{
+    padding: 0.5rem 4rem;
+    background: #436397 !important;
+    border: 1px solid;
+    border-color: #436397;
+    border-radius: .5rem;
+    box-shadow: 0 10px 30px rgb(67, 99, 151);
+    margin: 10px auto;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: #FFF;
+    display: block;
+    height:37px;
+}
+.login_row .Login_Frm .form-control {
+    height: 40px;
+    width: 100%;
+}
+.login_row .Login_Frm p
+{
+    padding: 0 20px 30px;
+}
+#err_msg a {
+    display: none;
+}
+.myaccount_row
+{
+     width: 100%;
+    float: left;
+    padding: 100px 0;
+    margin:0;
+}
+.myaccount_row h2
+{
+    font-size: 36px;
+    margin-bottom: 50px !important;
+}
+.myaccount_row .wppb-form-field > span
+{
+    width: 50% !important;
+    margin-left: 23.5% !important;
+}
+.myaccount_row label[for="edit_user"]
+{
+    width:23%;
+}
+.myaccount_row .text-input, .myaccount_row select#display-name
+{
+    width:64% !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+    border-color: #EBEBEB !important ;
+    height: 40px;
+    border-radius: 0 !important;
+}
+.myaccount_row #wppb-edit-user #edit_profile
+{
+    padding: 0.5rem 4rem;
+    background: #436397 !important;
+    border: 1px solid;
+    border-color: #436397;
+    border-radius: .5rem;
+    box-shadow: 0 10px 30px rgb(67, 99, 151);
+    margin: 10px 12px 0 0;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+    font-family: 'Nunito';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: #FFF;
+    display: inline;
+    height:37px;
+}
+.page-id-2531 .entry-content {
+    height: 100vh;
+}
+.logout_row
+{
+     width: 100%;
+    float: left;
+    padding: 100px 0;
+    margin:0;
+}
+div#dashboard {
+    display: none;
+}
+.logged-in div#dashboard {
+    display: block;
+}
+
+#graph_price {
+    display: none;
+}
+#user_traction{
+	display:none;
+}
+
+.logged-in #user_traction {
+    display: block;
+}
+.logged-in #graph_price {
+    display: block;
+}
+.logged-in #home {
+    display: none;
+}
+.logged-in #about-us {
+    display: none;
+}
+.logged-in #features {
+    display: none;
+}
+.logged-in #pricing {
+    display: none;
+}
+
+.logged-in #subscribe {
+    display: none;
+}
+
+.logged-in #crypto_mobile_img {
+    display: none;
+}
+/*Responsive*/
+@media all and (min-width:320px) and (max-width:480px)
+{
+     .home_row
+    {
+        padding: 40px 0 0px 0;
+    }
+    .home_row h2 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    
+    .home_row .intro h5
+    {
+        margin-top: 25px;
+    }
+    .about_section h2
+    {
+        line-height:36px;
+    }
+   .secondRow h2
+   {
+       line-height:36px;
+   }
+    .secondRow .second_inner .fourCols
+    {
+        width: 100%;
+        margin-bottom:15px;
+    }
+    .pricing_row .mega-price-table-4 > .pricing-table .plan.featured
+    {
+        margin-bottom: 15px;
+    }
+    .fourthRow h2
+    {
+            font-size: 28px;
+    }
+    .fourthRow .es_textbox
+    {
+        width: 100%;
+    }
+    .fourthRow .es_textbox input[type="email"]
+    {
+        width: 60%;
+    }
+    .fourthRow .es_textbox input#es_txt_button
+    {
+        width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+    }
+    .register_row .text-input
+    {
+        width:100% !important;
+    }
+}
+@media all and (min-width:481px) and (max-width:640px)
+{
+     .home_row
+    {
+        padding: 40px 0 0px 0;
+    }
+    .home_row h2 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    
+    .home_row .intro h5
+    {
+        margin-top: 25px;
+    }
+    .about_section h2
+    {
+        line-height:36px;
+    }
+   .secondRow h2
+   {
+       line-height:36px;
+   }
+    .secondRow .second_inner .fourCols
+    {
+        width: 100%;
+        margin-bottom:15px;
+    }
+    .pricing_row .mega-price-table-4 > .pricing-table .plan.featured
+    {
+        margin-bottom: 15px;
+    }
+    .fourthRow h2
+    {
+            font-size: 28px;
+    }
+    .fourthRow .es_textbox
+    {
+            width: 90%;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+    .fourthRow .es_textbox input[type="email"]
+    {
+           width: 70%;
+    }
+    .fourthRow .es_textbox input#es_txt_button
+    {
+       width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    }
+    .pricing_row .mega-price-table-4 > .pricing-table .plan {
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+    .register_row .text-input
+    {
+        width:100% !important;
+    }
+}
+@media all and (min-width:641px) and (max-width:767px)
+{
+     .home_row
+    {
+        padding: 40px 0 0px 0 !important;
+    }
+    .home_row h2 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    
+    .home_row .intro h5
+    {
+        margin-top: 25px;
+    }
+    .about_section h2
+    {
+        line-height:36px;
+    }
+   .secondRow h2
+   {
+       line-height:36px;
+   }
+    .secondRow .second_inner .fourCols
+    {
+        width: 100%;
+        margin-bottom:15px;
+    }
+    .pricing_row .mega-price-table-4 > .pricing-table .plan.featured
+    {
+        margin-bottom: 15px;
+    }
+    .fourthRow
+    {
+            padding: 90px 0 50px 0 !important;
+    }
+    .fourthRow h2
+    {
+            font-size: 28px;
+    }
+     .fourthRow .es_textbox
+    {
+            width: 90%;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+   .fourthRow .es_textbox input[type="email"]
+    {
+           width: 70%;
+    }
+    .fourthRow .es_textbox input#es_txt_button
+    {
+       width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    }
+     .pricing_row .mega-price-table-4 > .pricing-table .plan {
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+    .register_row .text-input
+    {
+        width:100% !important;
+    }
+}
+@media all and (min-width:768px) and (max-width:991px)
+{
+     .home_row
+    {
+        padding: 40px 0 0px 0 !important;
+    }
+    .home_row h2 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    
+    .home_row .intro h5
+    {
+        margin-top: 25px;
+    }
+    .about_section h2
+    {
+        line-height:36px;
+    }
+   .secondRow h2
+   {
+       line-height:36px;
+   }
+    .pricing_row .mega-price-table-4 > .pricing-table .plan.featured
+    {
+        margin-bottom: 15px;
+    }
+    .fourthRow
+    {
+            padding: 90px 0 50px 0 !important;
+    }
+    .fourthRow h2
+    {
+            font-size: 28px;
+    }
+     .fourthRow .es_textbox
+    {
+            width: 90%;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+   .fourthRow .es_textbox input[type="email"]
+    {
+           width: 70%;
+    }
+    .fourthRow .es_textbox input#es_txt_button
+    {
+       width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    }
+   .pricing_row .vc_col-sm-3
+   {
+       width:50% !important;
+   }
+   footer#Footer {
+       position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+@media all and (min-width:992px) and (max-width:1030px)
+{
+     .home_row
+    {
+        padding: 40px 0 0px 0 !important;
+    }
+    .home_row h2 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    
+    .home_row .intro h5
+    {
+        margin-top: 25px;
+    }
+    .about_section h2
+    {
+        line-height:36px;
+    }
+   .secondRow h2
+   {
+       line-height:36px;
+   }
+    .pricing_row .mega-price-table-4 > .pricing-table .plan.featured
+    {
+        margin-bottom: 15px;
+    }
+    .fourthRow
+    {
+            padding: 90px 0 50px 0 !important;
+    }
+    .fourthRow h2
+    {
+            font-size: 28px;
+    }
+     .fourthRow .es_textbox
+    {
+            width: 90%;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+   .fourthRow .es_textbox input[type="email"]
+    {
+           width: 70%;
+    }
+    .fourthRow .es_textbox input#es_txt_button
+    {
+       width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    }
+   .pricing_row .vc_col-sm-3
+   {
+       width:50% !important;
+   }
+   footer#Footer {
+       position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+@media all and (min-width:1031px) and (max-width:1199px)
+{
+      .home_row
+    {
+        padding: 40px 0 0px 0 !important;
+    }
+    .home_row h2 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    
+    .home_row .intro h5
+    {
+        margin-top: 25px;
+    }
+    .about_section h2
+    {
+        line-height:36px;
+    }
+   .secondRow h2
+   {
+       line-height:36px;
+   }
+    .pricing_row .mega-price-table-4 > .pricing-table .plan.featured
+    {
+        margin-bottom: 15px;
+    }
+    .fourthRow
+    {
+            padding: 90px 0 50px 0 !important;
+    }
+    .fourthRow h2
+    {
+            font-size: 28px;
+    }
+     .fourthRow .es_textbox
+    {
+            width: 90%;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+   .fourthRow .es_textbox input[type="email"]
+    {
+           width: 70%;
+    }
+    .fourthRow .es_textbox input#es_txt_button
+    {
+       width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    }
+   .pricing_row .vc_col-sm-3
+   {
+       width:50% !important;
+   }
+   footer#Footer {
+       position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+@media all and (min-width:1200px) and (max-width:1250px)
+{
+      .home_row
+    {
+        padding: 40px 0 0px 0 !important;
+    }
+    .home_row h2 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    
+    .home_row .intro h5
+    {
+        margin-top: 25px;
+    }
+    .about_section h2
+    {
+        line-height:36px;
+    }
+   .secondRow h2
+   {
+       line-height:36px;
+   }
+    .pricing_row .mega-price-table-4 > .pricing-table .plan.featured
+    {
+        margin-bottom: 15px;
+    }
+    .fourthRow
+    {
+            padding: 90px 0 50px 0 !important;
+    }
+    .fourthRow h2
+    {
+            font-size: 28px;
+    }
+     .fourthRow .es_textbox
+    {
+            width: 90%;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+   .fourthRow .es_textbox input[type="email"]
+    {
+           width: 70%;
+    }
+    .fourthRow .es_textbox input#es_txt_button
+    {
+       width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    }
+   .pricing_row .vc_col-sm-3
+   {
+       width:50% !important;
+   }
+   footer#Footer {
+       position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+.emaillist{
+	    margin: 30px 0;
+}
+.emaillist .es-field-wrap label{
+	    margin: 0 auto;
+    width: 500px;
+	display:block;
+}
+.emaillist .es-field-wrap label input{
+	    margin: 10px auto 20px;
+    width: 500px;
+}
+.emaillist .es_submit_button{
+	text-align: center;
+    margin: 40px auto;
+    display: -webkit-box;
+	    background: #436397;
+    border: 1px solid;
+    border-color: #436397;
+    border-radius: 11px;
+    box-shadow: 0 10px 30px rgb(67, 99, 151);
+    -webkit-transition: 0.2s !important;
+    -moz-transition: 0.2s !important;
+    transition: 0.2s !important;
+    font-weight: 700 !important;
+    text-transform: capitalize !important;
+    letter-spacing: 0.5px !important;
+    color: #FFF !important;
+}

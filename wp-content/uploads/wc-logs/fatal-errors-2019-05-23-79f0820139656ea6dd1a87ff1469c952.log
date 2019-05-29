@@ -1,0 +1,4 @@
+2019-05-23T23:47:06+05:30 CRITICAL Call to undefined method WCP_Trades_View::render_view_front_transaction_html() in /mnt/tmp/hosting/web/bankofcrypto.com-virtual/public_html/wp-content/plugins/website-custom-plugin/WCP/Trades/Controller.php on line 77
+
+2019-05-23T23:47:54+05:30 CRITICAL Call to undefined method WCP_Trades_View::render_view_front_transaction_html() in /mnt/tmp/hosting/web/bankofcrypto.com-virtual/public_html/wp-content/plugins/website-custom-plugin/WCP/Trades/Controller.php on line 77
+
